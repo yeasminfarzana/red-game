@@ -32,7 +32,14 @@ function showOption(option) {
   return option.requiredState == null || option.requiredState(state);
 }
 
-function selectOption() {}
+function selectOption() {
+  const nextTextNodeId = option.nextText;
+  if (nextTextNodeId <= 0) {
+    return startGame();
+  }
+  state = Object.assign(state, option.setState);
+  showTextNode(nextTextNodeId);
+}
 
 const textNodes = [
   {
@@ -62,6 +69,16 @@ const textNodes = [
       {
         text: "Do not shoot",
         nextText: 3,
+      },
+    ],
+  },
+  {
+    id: 3,
+    text: "at",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1,
       },
     ],
   },
