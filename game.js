@@ -32,7 +32,7 @@ function showOption(option) {
   return option.requiredState == null || option.requiredState(state);
 }
 
-function selectOption() {
+function selectOption(option) {
   const nextTextNodeId = option.nextText;
   if (nextTextNodeId <= 0) {
     return startGame();
@@ -94,7 +94,6 @@ const textNodes = [
     options: [
       {
         text: "Shoot",
-        requiredState: (currentState) => currentState.shoot,
         nextText: 6,
       },
       {
@@ -110,7 +109,6 @@ const textNodes = [
     options: [
       {
         text: "Shoot",
-        requiredState: (currentState) => currentState.shoot,
         nextText: 8,
       },
       {
@@ -156,7 +154,7 @@ const textNodes = [
   },
 
   {
-    id: 10,
+    id: 11,
     text: "YOU LOST!",
     options: [
       {
