@@ -122,29 +122,6 @@ const textNodes = [
     id: 6,
     text: "BANG! BANG! The little girl dropped her basket and ran to her grandma's bedroom while still holding the gun. Her grandma was tied to the chair.\n After removing a piece of cloth from her mouth, she smiled.\n ",
     nextText: 10,
-  },
-
-  {
-    id: 7,
-    text: "After hesitating for a second, the massive man threw a vase towards the little girl.\n\n The last thing she saw was red and then all went black...",
-    nextText: 11,
-  },
-
-  {
-    id: 8,
-    text: 'BANG! BANG! The little girl dropped her basket and ran to her grandma\'s bedroom while still holding the gun.\n "Nooo!" Her grandma cried out loud. She looked behind her.\n\n The front door was open again and a massive man was pointing his rifle to her.',
-    nextText: 11,
-  },
-
-  {
-    id: 9,
-    text: 'After hesitating for a second, the furry wolf went back to her grandma\'s bedroom. The little girl ran to find her petting him.\n "The hunter is coming soon" she said with a smile. "Be ready with your gun. Together we can defeat him."',
-    nextText: 10,
-  },
-
-  {
-    id: 10,
-    text: "YOU WON!",
     options: [
       {
         text: "Restart",
@@ -154,8 +131,33 @@ const textNodes = [
   },
 
   {
-    id: 11,
-    text: "YOU LOST!",
+    id: 7,
+    text: "After hesitating for a second, the massive man threw a vase towards the little girl.\n\n The last thing she saw was red and then all went black...",
+    nextText: 11,
+    options: [
+      {
+        text: "Restart",
+        nextText: -1,
+      },
+    ],
+  },
+
+  {
+    id: 8,
+    text: 'BANG! BANG! The little girl dropped her basket and ran to her grandma\'s bedroom while still holding the gun.\n "Nooo!" Her grandma cried out loud. She looked behind her.\n\n The front door was open again and a massive man was pointing his rifle to her.',
+    nextText: 11,
+    options: [
+      {
+        text: "Restart",
+        nextText: -1,
+      },
+    ],
+  },
+
+  {
+    id: 9,
+    text: 'After hesitating for a second, the furry wolf went back to her grandma\'s bedroom. The little girl ran to find her petting him.\n "The hunter is coming soon" she said with a smile. "Be ready with your gun. Together we can defeat him."',
+    nextText: 10,
     options: [
       {
         text: "Restart",
