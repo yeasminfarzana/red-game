@@ -1,6 +1,8 @@
+/*Const for Text and buttons HTML*/
 const textElement = document.getElementById("text");
 const optionButtonsElement = document.getElementById("option-buttons");
 
+/*Empty obj*/
 let state = {};
 
 /* Function to start game */
@@ -9,7 +11,7 @@ function startGame() {
   showTextNode(1);
 }
 
-/*Take particular index*/
+/*Function that takes a particular index and show text*/
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find((textNode) => textNode.id === textNodeIndex);
   textElement.innerText = textNode.text;
@@ -17,6 +19,7 @@ function showTextNode(textNodeIndex) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
 
+  /*Option buttons*/
   textNode.options.forEach((option) => {
     if (showOption(option)) {
       const button = document.createElement("button");
@@ -28,10 +31,12 @@ function showTextNode(textNodeIndex) {
   });
 }
 
+/*Function that shows option buttons */
 function showOption(option) {
-  return option.requiredState == null || option.requiredState(state);
+  return option.requiredState == null;
 }
 
+/*Function that activate button to next text*/
 function selectOption(option) {
   const nextTextNodeId = option.nextText;
   if (nextTextNodeId <= 0) {
@@ -41,6 +46,12 @@ function selectOption(option) {
   showTextNode(nextTextNodeId);
 }
 
+/*Obj with keys and values
+textnodes -> id
+          -> text
+          -> options -> text
+                     -> nextText*/
+
 const textNodes = [
   {
     id: 1,
@@ -48,7 +59,6 @@ const textNodes = [
     options: [
       {
         text: "Lake",
-        setState: { springFlowers: true },
         nextText: 2,
       },
       {

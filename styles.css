@@ -20,7 +20,7 @@ body {
 .container {
   max-width: 50%;
   background-color: white;
-  padding: 10px;
+  padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 .btn {
-  background-color: hsl(295, 70%, 90%);
+  background-color: hsl(300, 14%, 84%);
   border: 1px solid hsl(294, 28%, 80%);
   border-radius: 5px;
   padding: 5px 10px;
